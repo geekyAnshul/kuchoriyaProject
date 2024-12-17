@@ -1,0 +1,446 @@
+.poppins{
+  font-family: "Poppins", serif;
+}
+
+
+
+.card {
+  width: 400px;
+  height: 200px;
+  background-image: url('https://th.bing.com/th/id/OIP.h8aUPtiJ-RsoPCWt3-Oi0QHaEu?rs=1&pid=ImgDetMain');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden; 
+  position: relative;
+}
+
+.left-side,
+.right-side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.6s ease, opacity 0.6s ease; 
+  position: absolute; 
+  height: 100%;
+  top: 0;
+}
+
+.left-side {
+  background-color: rgba(179, 179, 179, 0.504);
+  left: 0;
+  z-index: 1;
+}
+
+.right-side {
+  background-color: rgba(0, 0, 0, 0.729);
+  right: 0;
+  z-index: 1;
+}
+
+
+.card:hover .left-side {
+  transform: translateX(100%); 
+  opacity: 0.8; 
+}
+.card:hover .right-side {
+  transform: translateX(-100%); 
+  opacity: 0.8; 
+}
+
+
+.left-side .textt{
+  
+  position: relative;
+  z-index: 2; 
+  transition: color 0.6s ease; 
+}
+.right-side .text {
+  color: white;
+  position: relative;
+  z-index: 2; 
+  transition: color 0.6s ease; 
+}
+
+.card:hover .textt h1{
+  transform: scale(1.2);
+  color: rgb(236, 69, 51);
+}
+.card:hover .text h1 {
+  color: rgb(255, 255, 255); 
+}
+
+
+/* @keyframes wave {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-wavy {
+  animation: wave 2s infinite;
+}
+
+.group-hover\:scale-110 {
+  transform: scale(1.1);
+} */
+/* Hover Glow Animation */
+.hover\\:shadow-orange-500 {
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.8); 
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+/* Scale Effect */
+.hover\\:scale-105:hover {
+  transform: scale(1.05); 
+}
+
+/* Wavy Animation */
+@keyframes wave {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-wavy {
+  animation: wave 2s infinite;
+}
+
+
+/* Main Container */
+.tech-stack-container {
+  text-align: center;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Tabs Styling */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.tab {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  color: orange;
+  border-bottom-color: orange;
+  font-weight: bold;
+}
+
+/* Technologies Grid */
+.technologies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Individual Tech Item */
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.tech-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-item:hover .tech-icon {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.8); /* Glowing effect */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tabs {
+    flex-wrap: wrap;
+  }
+}
+
+/* 
+body
+{
+  background-color:#f2f2f2;
+  font-family: 'RobotoDraft', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+} */
+
+*
+{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h5
+{
+  margin:0px;
+  font-size:1.4em;
+  font-weight:700;
+}
+
+p
+{
+  font-size:12px;
+}
+
+/* .center
+{
+  height:100vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* End Non-Essential  */
+
+.property-card
+{
+  height:18em;
+  width:18em;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+/* Top Half of card, image. */
+
+.property-image
+{
+  height:6em;
+  width:18em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://img00.deviantart.net/713e/i/2009/150/f/9/ronaldo_vs_messi_by_ussjbogdam.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+
+
+
+/* Bottom Card Section */
+
+.property-description
+{
+  background-color: #FAFAFC;
+  height:12em;
+  width:14em;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+}
+
+/* Social Icons */
+
+.property-social-icons
+{
+  width:1em;
+  height:1em;
+  background-color:black;
+  position:absolute;
+  bottom:1em;
+  left:1em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Property Cards Hover States */
+
+.property-card:hover .property-description
+{
+  height:0em;
+  padding:0px 1em;
+}
+.property-card:hover .property-image
+{
+  height:18em;
+}
+
+.property-card:hover .property-social-icons
+{
+  background-color:white;
+}
+
+.property-card:hover .property-social-icons:hover
+{
+  background-color:blue;
+  cursor:pointer;
+}
+
+
+
+
+
+.propertty-image
+{
+  height:6em;
+  width:18em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://cdn.dribbble.com/users/2064121/screenshots/17027429/media/81272b548eb6337555dcac90f01e428e.jpg?compress=1&resize=640x480&vertical=center');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.property-card:hover .propertty-image
+{
+  height:18em;
+}
+
+
+.properttty-image
+{
+  height:6em;
+  width:18em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://apssmarthub.com/wp-content/uploads/2021/04/APS-Mockup.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.property-card:hover .properttty-image
+{
+  height:18em;
+}
+
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: #f9f9f9; /* Optional Background */
+}
+
+/* Track for Scrolling Animation */
+.slider-track {
+  display: flex;
+  width: calc(200px * 8); /* 8 slides of 200px each */
+  animation: scroll 10s linear infinite;
+}
+
+/* Individual Slides */
+.slide {
+  flex: 0 0 200px; /* Fixed width for slides */
+  text-align: center;
+  margin: 0 10px; /* Optional spacing */
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.slide p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
